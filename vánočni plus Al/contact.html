@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Vánoční web – Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Vánoční Web</div>
+    <nav>
+        <a href="index.html">Domů</a>
+        <a href="about.html">O nás</a>
+        <a href="contact.html">Kontakt</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Kontakt</h1>
+    <p>Můžete nám napsat svá vánoční přání nebo dotazy:</p>
+
+    <form>
+        <label>Jméno:</label><br>
+        <input type="text" style="width:100%; padding:8px;"><br><br>
+
+        <label>Vaše zpráva:</label><br>
+        <textarea style="width:100%; height:120px; padding:8px;"></textarea><br><br>
+
+        <button>Odeslat</button>
+    </form>
+</div>
+
+<footer class="footer">
+    © 2025 Vánoční web — vytvořeno pro školní projekt
+</footer>
+
+
+<script>
+    // vytvoří 40 padajících vloček
+    for (let i = 0; i < 40; i++) {
+        let flake = document.createElement("div");
+        flake.className = "snow";
+
+        // náhodná pozice a velikost
+        flake.style.left = Math.random() * 100 + "vw";
+        flake.style.animationDuration = 3 + Math.random() * 5 + "s";
+        flake.style.opacity = Math.random();
+
+        document.body.appendChild(flake);
+    }
+</script>
+
+
+
+
+
+</body>
+</html>
+

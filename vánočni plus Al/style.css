@@ -1,0 +1,177 @@
+/* CSS Document */
+/* CSS Document */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+
+    /* fialovo-zelený přechod pozadí */
+    background: linear-gradient(135deg, #5a00a3, #00b46f);
+    color: white;
+}
+
+header {
+    background: rgba(0,0,0,0.35);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #7affae; /* neon zelená */
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #d98aff; /* světle fialová */
+    margin-bottom: 10px;
+}
+
+/* odkazy */
+nav a {
+    color: #7affae; /* neon zelená */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 22px;
+    border-radius: 999px;
+    transition: 0.3s ease;
+    display: inline-block;
+    border: 2px solid transparent;
+}
+
+nav a:hover {
+    background: #7affae;      /* zelený ovál */
+    color: #3b0063;           /* tmavě fialový text */
+    border-color: #7affae;
+    transform: scale(1.1);
+    box-shadow: 0 0 14px #7affae; /* neon glow */
+}
+
+/* obsah boxu */
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background: rgba(0,0,0,0.35);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #d98aff; /* fialový okraj */
+}
+
+/* sněhové vločky */
+.snowflake {
+    color: #e6e6ff;
+    font-size: 34px;
+}
+
+/* patička */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #c3ffd9;
+}
+
+                      /* ❄ Globální animace sněžení ❄ */
+.snow {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 24px;
+    pointer-events: none;
+    animation-name: snowFall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* animace pádu */
+@keyframes snowFall {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* vločka znak */
+.snow::before {
+    content: "❄";
+}
+
+/* Styl tlačítek ve formuláři (Kontakt) */
+form button {
+    background: #7affae;        /* zelená jako menu odkazy */
+    color: #3b0063;             /* tmavě fialový text, čitelný na zelené */
+    border: none;
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+/* hover efekt */
+form button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 14px #7affae; /* jemný glow efekt jako menu */
+    background: #7affae;          /* zůstane zelená */
+    color: #3b0063;
+}
+
+
+ /* Flexbox pro about stránku */
+.about-flex {
+    display: flex;
+    align-items: flex-start; /* zarovná text a obrázky nahoře */
+    gap: 20px;               /* mezera mezi textem a obrázky */
+}
+
+.about-text {
+    flex: 2;                 /* text zabere větší část */
+}
+
+.about-images {
+    flex: 1;                 /* obrázky zabírají menší část */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;               /* mezera mezi obrázky */
+}
+
+.about-images img {
+    width: 100%;             /* obrázky vyplní šířku bloku */
+    border-radius: 10px;     /* zaoblené rohy */
+    object-fit: cover;       /* hezké oříznutí obrázku */
+}
+
+
+//* Flexbox pro index stránku */
+.index-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;              /* mezera mezi textem a obrázkem */
+}
+
+/* Text zabere větší část */
+.index-text {
+    flex: 2;
+}
+           
+.index-image-container img {
+    width: 100%;          /* vyplní kontejner */
+    max-width: 200px;     /* omezení velikosti obrázku */
+    height: auto;         /* zachová proporce */
+    border-radius: 12px;
+    display: block;
+}
+
+.index-content {
+    position: relative;
+}
+
+.index-image {
+    position: absolute;
+    right: 0;               /* obrázek je vpravo */
+    top: 0;                 /* vyrovnání k hornímu okraji textu */
+    max-width: 200px;       /* stejná velikost jako v O nás */
+    height: auto;
+    border-radius: 12px;
+}
+        

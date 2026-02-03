@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Vánoční web – O nás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Vánoční Web</div>
+    <nav>
+        <a href="index.html">Domů</a>
+        <a href="about.html">O nás</a>
+        <a href="contact.html">Kontakt</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>O nás</h1>
+    <div class="about-flex">
+    <div class="about-text">
+        <p>Tyto stránky byly vytvořeny jako vánoční projekt. Naším cílem je přinést trochu radosti a atmosféry Vánoc.</p>
+        <p>Najdete tu informace, přání a sváteční grafiku.</p>
+    </div>
+    <div class="about-images">
+        <img src="obrazek1.jpg" alt="Obrázek 1">
+        <img src="obrazek3.jpg" alt="Obrázek 3">
+    </div>
+</div>
+
+</div>
+
+<footer class="footer">
+    © 2025 Vánoční web — vytvořeno pro školní projekt
+</footer>
+
+
+<script>
+    // vytvoří 40 padajících vloček
+    for (let i = 0; i < 40; i++) {
+        let flake = document.createElement("div");
+        flake.className = "snow";
+
+        // náhodná pozice a velikost
+        flake.style.left = Math.random() * 100 + "vw";
+        flake.style.animationDuration = 3 + Math.random() * 5 + "s";
+        flake.style.opacity = Math.random();
+
+        document.body.appendChild(flake);
+    }
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
